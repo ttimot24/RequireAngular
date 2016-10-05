@@ -1,0 +1,177 @@
+/*
+ * Start Bootstrap - Heroic Features (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+
+
+@font-face {
+    font-family: "yourfont";
+    src: url(vendor/fonts/open_sans/OpenSans-Regular.ttf) format("truetype");
+}
+
+@yourfont: 'yourfont';
+
+@color: black;
+
+body{
+    color: @color;
+    font-family: @yourfont, sans-serif !important;
+    padding-top: 70px; 
+}
+
+@success: #3c763d;
+@warning: #f0ad4e;
+@danger:  #c7254e;
+@note:    #1b809e;
+@note-light: rgba(27,128,158,0.2);
+
+/*.jumbotron{
+    background-color:#1b809e;
+}
+
+.navbar{
+    margin-bottom:0px;
+    background-color: @note-light;
+}
+
+a.navbar-brand{
+    background-color: @note !important;
+    color:white !important;
+    font-weight:bolder;
+}*/
+
+table .collapse.in {
+    display:table-row;
+}
+
+.table-hover tr:hover a{
+    color:white;
+}
+
+tr{
+    &:hover{
+        background-color: @note !important;
+        color:white;
+        /*cursor:pointer;*/
+    }
+}
+
+tr.row-dropdown{
+    /*padding:30px !important;*/
+    background-color: @note;
+
+    &:hover{
+        /*background-color: white !important;*/
+        color:black;
+    }
+}
+
+
+thead tr{
+    
+    &:hover{
+        background-color: white !important;
+        color:black;
+    }
+
+}
+
+.btn{
+    background:transparent;
+}
+
+.btn-primary{
+    border: 1px solid @note;
+    color: @note;
+    font-weight:bolder;
+    border-radius:2px;
+}
+
+.btn-primary,.btn-primary:hover{
+    transition: .5s;
+}
+
+.alert{
+    border-radius: 3px !important;
+    min-height:100px;
+    color:#333;
+    background: transparent;
+}
+
+.alert strong{
+    font-size:17px;
+}
+
+.alert-success{
+    border-left: solid 5px @success !important;
+
+    strong,b{
+        color: @success;
+    }
+
+}
+
+
+.alert-warning{
+    border-left: solid 5px @warning !important;
+
+    strong,b{
+        color: @warning;
+    }
+
+}
+
+
+.alert-danger{
+    border-left: solid 5px @danger !important;
+
+    strong,b{
+        color: @danger;
+    }
+
+}
+
+
+
+.alert-note{
+    border: solid .5px @note-light !important;
+    border-left: solid 5px @note !important;
+
+    strong,b{
+        color: @note;
+    }
+
+}
+
+
+i.fa{
+    padding:5px;
+    padding-bottom:2px;
+
+    &:hover{
+        cursor:pointer;
+        background-color: white !important;
+        border-radius:90px;
+        color:black;
+
+    }
+
+}
+
+
+.hero-spacer {
+    margin-top: 50px;
+}
+
+.hero-feature {
+    margin-bottom: 30px;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+
+
