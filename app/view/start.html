@@ -22,12 +22,12 @@
         <div class="row text-center" >
 
 
-            <div class="col-md-3 col-sm-6 hero-feature" ng-repeat="image_path in cards">
+            <div class="col-md-3 col-sm-6 hero-feature" ng-repeat="card in cards">
                 <div class="thumbnail">
-                    <img src='{{image_path}}' alt="" />
+                    <img src='{{card.image}}' alt="" />
                     <div class="caption">
-                        <h3>Feature Label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <h3>{{card.title}}</h3>
+                        <p>{{card.description}}</p>
                         <p>
                             <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
                         </p>
@@ -35,44 +35,6 @@
                 </div>
             </div>
 
-            <!--<div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="storage/images/kep2.jpg" alt="" />
-                    <div class="caption">
-                        <h3>Feature Label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <p>
-                            <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="" />
-                    <div class="caption">
-                        <h3>Feature Label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <p>
-                            <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="" />
-                    <div class="caption">
-                        <h3>Feature Label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <p>
-                            <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
-                        </p>
-                    </div>
-                </div>
-            </div>-->
 
         </div>
         <!-- /.row -->
