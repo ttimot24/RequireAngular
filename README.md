@@ -9,5 +9,6 @@ RequireAngular framework is an AngularJS framework that loads controllers and vi
 * jQuery
 * AngularJs
 * RequireJs
+* Babel
 * Bootstrap
 * Less
