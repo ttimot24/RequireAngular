@@ -4,15 +4,17 @@ requirejs.config({
         "jQuery": "vendor/jquery/jquery",
         "AngularJS": "vendor/angular/angular.min",
         "AngularRoute": "vendor/angular/route",
-        "RouteResolver": "app/service/routeResolver",
+        "RouteResolver": "app/service/AngularRouteResolver",
         "Bootstrap": "vendor/bootstrap/js/bootstrap",
         "Application": "app/application",
         "Less": "vendor/less/less",
-        "Spinner": "vendor/spin.js/spin",
+        "Babel" : "vendor/babel/babel",
+        "MomentJS" : "vendor/moment/moment",
+        "AngularMoment" : "app/service/AngularMoment",
     },
     shim: {
         "Application" : {
-            deps: ["Less","AngularRoute","Bootstrap","RouteResolver","Spinner"], 
+            deps: ["Less","AngularRoute","Bootstrap","RouteResolver","Babel",/*,"AngularMoment"*/], 
         },
         "RouteResolver":{
             deps: ["jQuery","AngularRoute"],
@@ -33,11 +35,20 @@ requirejs.config({
         "Bootstrap" : {
             deps : ["jQuery"],
         },
-        "Spinner":{
-            deps: ["jQuery"],
+        "Babel" : {
+           
+        },
+        "MomentJS" : {
+            deps : ["jQuery"],
+            exports : "moment",
+        },
+        "AngularMoment" : {
+            deps : ["AngularRoute","MomentJS"],
         }
     },
-    deps: ["Application"]
+    deps: ["Application"],
+
+
 });
 
 
@@ -46,10 +57,11 @@ console.log("RequireJS config loaded successfully!");
 
 requirejs(
     [
-        "AngularJS",
         "Application",
+        "app/model/ES6/Card.js",
+        "app/model/ES6/Blogpost.js",
     ],
-    function () {
-        angular.bootstrap(document, ['startAngularApp']);
+    function ($) {
+        angular.bootstrap(document.body, ['startAngularApp']); //Nem kell ng-app a HTML-be ha ezt használjuk
         console.log("AngularJS started successfully!");
     });

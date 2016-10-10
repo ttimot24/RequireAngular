@@ -1,5 +1,5 @@
 require.config({
-    //baseUrl: '..',
+   // baseUrl: '/../',
     paths: {
         "jQuery": "vendor/jquery/jquery",
         "AngularJS": "vendor/angular/angular.min",

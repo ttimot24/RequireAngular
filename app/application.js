@@ -1,8 +1,8 @@
-var app = angular.module('startAngularApp', ["ngRoute","routeResolverServices"]);
+var app = angular.module('startAngularApp', ["ngRoute","routeResolverServices"/*,"angularMoment"*/]);
 
 
 
-app.config(function($routeProvider,routeResolverProvider,$controllerProvider,$compileProvider, $filterProvider, $provide){
+app.config(function($routeProvider,routeResolverProvider,$controllerProvider,$compileProvider, $filterProvider, $provide/*, moment*/){
 
 
 routeResolverProvider.routeConfig.setBaseDirectories('app/view/', 'app/controller/');
@@ -24,15 +24,14 @@ var route = routeResolverProvider.route;
 
 
     $routeProvider
-		    .when("/", //{
-		    	route.resolve('Start')
-		    	/*controller : "StartController",
-		        templateUrl : "app/view/start.html"*/
-		    /*}*/).when("/blog",//{
+		    .when(
+		    		"/", 
+		    		route.resolve('Start')
+		    )
+		    .when(
+		    		"/blog",
 		    		route.resolve('Blog')
-		    	//controller : "StartController",
-		    	//templateUrl : "app/view/blog.html"
-		    /*}*/)
+		    )
 		    .otherwise({redirectTo: '/'});
 
 

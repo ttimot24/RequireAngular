@@ -1,31 +1,19 @@
 //define(['Application'], function (apps) {
-      app.register.controller('StartController', function($scope,$http) {
+      app.register.controller('StartController', function($scope,$http/*,moment*/) {
       			
             $scope.headtext = 'StartAngular';
-
+            
             $scope.cards = [
-                              {
-                                 'title' : 'Feature Label 1',
-                                 'image' : 'storage/images/kep1.jpg',
-                                 'description' : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
-                              },
-                              {                                 
-                                 'title' : 'Feature Label 2',
-                                 'image' : 'storage/images/kep2.jpg',
-                                 'description' : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
-                              },
-                              {                                 
-                                 'title' : 'Feature Label 3',
-                                 'image' : 'http://placehold.it/800x500',
-                                 'description' : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
-                              },
-                              {                                 
-                                 'title' : 'Feature Label 4',
-                                 'image' : 'http://placehold.it/800x500',
-                                 'description' : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
-                              },
+
+                              new Card('Feature Label 1','storage/images/kep1.jpg','Lorem ipsum dolor sit amet, consectetur adipisicing elit.'),
+                              new Card('Feature Label 2','storage/images/kep2.jpg','Lorem ipsum dolor sit amet, consectetur adipisicing elit.'),
+                              new Card('Feature Label 3','storage/images/kep3.jpg','Lorem ipsum dolor sit amet, consectetur adipisicing elit.'),
+                              new Card('Feature Label 4','storage/images/kep4.jpg','Lorem ipsum dolor sit amet, consectetur adipisicing elit.'),
   
                               ];
+
+
+           // $scope.now = moment();
 
 
       });
