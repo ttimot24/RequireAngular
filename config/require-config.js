@@ -1,46 +1,67 @@
-require.config({
-   // baseUrl: '/../',
+requirejs.config({
+    baseUrl: './',
     paths: {
         "jQuery": "vendor/jquery/jquery",
         "AngularJS": "vendor/angular/angular.min",
         "AngularRoute": "vendor/angular/route",
+        "RouteResolver": "app/service/AngularRouteResolver",
         "Bootstrap": "vendor/bootstrap/js/bootstrap",
-        "Application": "app/application"
+        "Application": "app/application",
+        "Less": "vendor/less/less",
+        "Babel" : "vendor/babel/babel",
+        "MomentJS" : "vendor/moment/moment",
+        "AngularMoment" : "app/service/AngularMoment",
     },
     shim: {
         "Application" : {
-            deps: ["AngularRoute","Bootstrap"], 
+            deps: ["Less","AngularRoute","Bootstrap","RouteResolver","Babel",/*,"AngularMoment"*/], 
+        },
+        "RouteResolver":{
+            deps: ["jQuery","AngularRoute"],
         },
         "AngularRoute" : {
             deps : ["AngularJS"],
         },
         "AngularJS" : {
             deps : ["jQuery"],
+            exports: 'angular',
+        },
+        "Less":{
+            deps: ["jQuery"],
         },
         "jQuery":{
             exports: "$",
         },
         "Bootstrap" : {
             deps : ["jQuery"],
+        },
+        "Babel" : {
+           
+        },
+        "MomentJS" : {
+            deps : ["jQuery"],
+            exports : "moment",
+        },
+        "AngularMoment" : {
+            deps : ["AngularRoute","MomentJS"],
         }
     },
-    deps: ["Application"]
+    deps: ["Application"],
+
+
 });
 
 
 console.log("RequireJS config loaded successfully!");
 
 
-require(
+requirejs(
     [
-       // "jQuery",
-        //"AngularJS",
-        //"AngularRoute",
-       // 'app/service/routeResolver',
         "Application",
-       // 'vendor/spin.js/spin',
+        "app/model/ES6/Card.js",
+        "app/model/ES6/Blogpost.js",
     ],
-    function (angular) {
-        angular.bootstrap(document, ['startAngularApp']);
+    function ($) {
+        angular.bootstrap(document.body, ['startAngularApp']); //Nem kell ng-app a HTML-be ha ezt használjuk
         console.log("AngularJS started successfully!");
     });
