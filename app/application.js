@@ -1,14 +1,12 @@
-var app = angular.module('startAngularApp', ["ngRoute","routeResolverServices"/*,"angularMoment"*/]);
+var app = angular.module('startAngularApp', ["ngRoute","routeResolverServices"]);
 
 
 
-app.config(function($routeProvider,routeResolverProvider,$controllerProvider,$compileProvider, $filterProvider, $provide/*, moment*/){
+app.config(function($routeProvider,routeResolverProvider,$controllerProvider,$compileProvider, $filterProvider, $provide){
 
 
 routeResolverProvider.routeConfig.setBaseDirectories('app/view/', 'app/controller/');
 var route = routeResolverProvider.route;
-
-
 
     app.register =
             {
@@ -21,8 +19,6 @@ var route = routeResolverProvider.route;
 
 
 
-
-
     $routeProvider
 		    .when(
 		    		"/", 
@@ -31,6 +27,9 @@ var route = routeResolverProvider.route;
 		    .when(
 		    		"/blog",
 		    		route.resolve('Blog')
+		    ).when(
+		    		"/alert",
+		    		route.resolve('alert')
 		    )
 		    .otherwise({redirectTo: '/'});
 

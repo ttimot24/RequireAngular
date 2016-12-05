@@ -4,11 +4,12 @@
 	<title>RequireJS</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
-	<link rel="stylesheet/less" type="text/css" href="style.less" />
+	<!--<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />-->
+	<link rel="stylesheet/less" type="text/css" href="vendor/bootstrapless/less/bootstrap.less" />
+	<!--<link rel="stylesheet/less" type="text/css" href="style.less" />-->
 	<script type="text/javascript" data-main='config/require-config.js' src='vendor/requirejs/require.js'></script>
 </head>
-	<body>
+	<body style="padding-top:50px;">
 
 		<section>
 
@@ -20,6 +21,9 @@
 		<div id='mySpinner' class=""><b>Loading...</b></div>
 		</section>
 	</body>
+
+
+
 
 	<script>
     	require(["vendor/spinjs/spin.js"],function(Spinner){

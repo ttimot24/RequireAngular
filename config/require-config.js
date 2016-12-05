@@ -11,6 +11,7 @@ requirejs.config({
         "Babel" : "vendor/babel/babel",
         "MomentJS" : "vendor/moment/moment",
         "AngularMoment" : "app/service/AngularMoment",
+        "NiceScroll" : "vendor/nicescroll/jquery.nicescroll.min",
     },
     shim: {
         "Application" : {
@@ -64,4 +65,5 @@ requirejs(
     function ($) {
         angular.bootstrap(document.body, ['startAngularApp']); //Nem kell ng-app a HTML-be ha ezt használjuk
         console.log("AngularJS started successfully!");
+
     });
