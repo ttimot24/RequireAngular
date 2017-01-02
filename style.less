@@ -1,15 +1,5 @@
 @import "vendor/bootstrapless/less/bootstrap.less";
 
-@font-face {
-  font-family: 'Glyphicons Halflings';
-  src: url('vendor/bootstrapless/fonts/glyphicons-halflings-regular.eot');
-  src: url('vendor/bootstrapless/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), 
-  	   url('vendor/bootstrapless/fonts/glyphicons-halflings-regular.woff') format('woff'), 
-  	   url('vendor/bootstrapless/fonts/glyphicons-halflings-regular.ttf') format('truetype'), 
-  	   url('vendor/bootstrapless/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
-}
-
-
 
 @gray-base:              #1f1f1f;
 @gray-darker:            lighten(@gray-base, 13.5%); // #222
@@ -80,7 +70,7 @@
 //## Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.
 
 //** Load fonts from this directory.
-@icon-font-path:          "../fonts/";
+@icon-font-path:          "vendor/bootstrapless/fonts/";
 //** File name for all font files.
 @icon-font-name:          "glyphicons-halflings-regular";
 //** Element ID within SVG icon file.
