@@ -1,5 +1,3 @@
-<p align="center"><img src="https://github.com/ttimot24/RequireAngular/blob/master/resources/ralogo.png" height="200"></p>
-
 # RequireAngular
 
 ### Write human readable JavaScript code. It's kinda Laravel, except it's frontend.
