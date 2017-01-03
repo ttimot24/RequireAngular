@@ -31,7 +31,10 @@ var route = routeResolverProvider.route;
 		    		"/alert",
 		    		route.resolve('alert')
 		    )
-		    .otherwise({redirectTo: '/'});
+		    .otherwise(
+		    	route.resolve('404')
+		    	//{redirectTo: '/'}
+		    	);
 
 
 });
